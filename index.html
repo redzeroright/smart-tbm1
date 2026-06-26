@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>스마트 TBM 안전보건 시스템 v3.4 - 법적 증빙 강화</title>
+    <title>스마트 TBM 안전보건 시스템 v3.5-</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <style>
         :root {
@@ -144,7 +144,7 @@
 <div class="container">
     <header class="no-print">
         <h1>스마트 TBM 안전보건 시스템</h1>
-        <p>산업안전보건법 준수 · 법적 증빙 강화 v3.4</p>
+        <p>---------------------------------</p>
         <div class="nav-tabs">
             <button id="btn-tab1" class="tab-button active-tab" onclick="changePage('page-step1', 'btn-tab1')">1. 세션 개설</button>
             <button id="btn-tab2" class="tab-button" onclick="changePage('page-step2', 'btn-tab2')">2. 현장 진행</button>
@@ -297,7 +297,7 @@
 <div id="tbm-viewer" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:#f0f4f8; z-index:1500; overflow-y:auto;">
     <div style="background:#00796b; color:white; padding:16px 20px; display:flex; justify-content:space-between; align-items:center; position:sticky; top:0; z-index:10;">
         <div>
-            <div style="font-size:11px; opacity:0.8;">스마트 TBM v3.4</div>
+            <div style="font-size:11px; opacity:0.8;">스마트 TBM v3.5</div>
             <div style="font-size:17px; font-weight:900;">🛡️ 오늘의 TBM 내용</div>
         </div>
         <button type="button" onclick="closeTbmViewer()" style="width:auto; padding:7px 14px; margin:0; background:rgba(255,255,255,0.25); color:white; font-size:13px; border-radius:6px; font-weight:700; border:1px solid rgba(255,255,255,0.4);">✕ 닫기</button>
@@ -405,7 +405,7 @@
     </div>
 </div>
 
-<!-- 회사 및 현장 정보 설정 모달 (고도화 v3.4) -->
+<!-- 회사 및 현장 정보 설정 모달 (고도화 v3.5) -->
 <div id="settingsModal" class="modal">
     <div class="modal-content">
         <h2>⚙️ 회사 및 현장 정보 설정</h2>
@@ -1104,7 +1104,7 @@
         }
 
         shareText += "\n" + "═".repeat(50) + "\n";
-        shareText += "산업안전보건법 준수 · 스마트TBM v3.4\n";
+        shareText += "산업안전보건법 준수 · 스마트TBM v3.5\n";
 
         const textarea = document.createElement('textarea');
         textarea.value = shareText;
@@ -1238,7 +1238,7 @@
                 
                 <div style="text-align:center; margin-bottom:20px; border-bottom:3px solid #00796b; padding-bottom:15px;">
                     <h1 style="font-size:20px; color:#00796b; margin:0 0 5px 0; font-weight:900;">🛡️ TBM 안전보건 기록부</h1>
-                    <p style="font-size:11px; color:#666; margin:0;">산업안전보건법 준수 · 스마트 TBM v3.4</p>
+                    <p style="font-size:11px; color:#666; margin:0;">산업안전보건법 준수 · 스마트 TBM v3.5</p>
                 </div>
 
                 <table style="width:100%; border-collapse:collapse; margin-bottom:15px;">
@@ -1334,6 +1334,34 @@
         }
     });
 </script>
-  
+ // 우마우스금지
+    <style>
+  #donation-banner {
+    display: none;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    font-size: 14px;
+  }
+</style>
+
+<div id="donation-banner">☕코드보기는 금지되어있습니다!</div>
+
+<script>
+  document.addEventListener('contextmenu', function(event) {
+    event.preventDefault();
+    const banner = document.getElementById('donation-banner');
+    banner.style.display = 'block';
+    setTimeout(() => {
+      banner.style.display = 'none';
+    }, 3000); // 3초 후 자동 숨김
+  });
+</script>
+ 
 </body>
 </html>
